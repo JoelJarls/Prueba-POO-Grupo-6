@@ -8,9 +8,9 @@ public class Registro {
     private String placa;
     private String idEspacio;
     private LocalDateTime horaEntrada;
-    private double duracionHoras; // ingresada al momento de salida
+    private double duracionHoras;
     private double totalPagado;
-    private boolean activo; // true = vehículo aún en el parqueadero
+    private boolean activo;
 
     public Registro(String placa, String idEspacio) {
         this.placa = placa;
