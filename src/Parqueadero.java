@@ -16,7 +16,7 @@ public class Parqueadero {
       return "ERROR: Ya existe un vehículo con la placa " + placa + ".";        
     }        
     vehiculos.add(new Vehiculo(placa, tipo));        
-    return "✔ Vehículo registrado: " + placa + " (" + tipo.toUpperCase().trim() + ")";    
+    return "Vehículo registrado: " + placa + " (" + tipo.toUpperCase().trim() + ")";    
   }       
   public Vehiculo buscarVehiculo(String placa) {        
     placa = placa.toUpperCase().trim();        
@@ -32,7 +32,7 @@ public class Parqueadero {
       }       
     }        
     espacios.add(new Espacio(id));        
-    return "✔ Espacio agregado: " + id;    
+    return "Espacio agregado: " + id;    
   }       
   private Espacio buscarEspacioLibre() {        
     for (Espacio e : espacios) {            
@@ -64,7 +64,7 @@ public class Parqueadero {
     }        
     espacio.ocupar();      
     registros.add(new Registro(placa, espacio.getId()));   
-    return "✔ Entrada registrada. Placa: " + placa + " → Espacio: " + espacio.getId();   
+    return "Entrada registrada. Placa: " + placa + " → Espacio: " + espacio.getId();   
   }      
   public String registrarSalida(String placa, double duracionHoras) {        
     placa = placa.toUpperCase().trim();
@@ -76,7 +76,7 @@ public class Parqueadero {
         r.registrarSalida(duracionHoras);         
         liberarEspacio(r.getIdEspacio());          
         return String.format(               
-          "✔ Salida registrada. Placa: %s | Duración: %.4f h | Total a pagar: $%.2f",                
+          "Salida registrada. Placa: %s | Duración: %.4f h | Total a pagar: $%.2f",                
           placa, duracionHoras, r.getTotalPagado());           
       }   
     }      
